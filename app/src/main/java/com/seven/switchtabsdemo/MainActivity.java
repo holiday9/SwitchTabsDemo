@@ -1,40 +1,50 @@
 package com.seven.switchtabsdemo;
 
+import android.app.Activity;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+
+import com.seven.widget.TabLabelSwitch;
+
+import java.util.ArrayList;
+import java.util.List;
 
 
-public class MainActivity extends ActionBarActivity {
+public class MainActivity extends Activity implements View.OnClickListener{
+    private TabLabelSwitch mTabLabelSwitch;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // test git
+        initTabLabelSwitch();
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
+    private void initTabLabelSwitch() {
+        View rootView = findViewById(R.id.switch_tab_label_root);
+        mTabLabelSwitch = new TabLabelSwitch(rootView);
+        mTabLabelSwitch.setOnSwitchListener(new TabLabelSwitch.OnSWitchListener() {
+            @Override
+            public void onSwitch(int index) {
+                System.out.println("index = " + index);
+            }
+        });
+        List<String> lables = new ArrayList<>();
+        lables.add("未使用");
+        lables.add("已使用");
+        lables.add("已过期");
+        mTabLabelSwitch.setLables(lables);
     }
 
+    int pos = 0;
     @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
+    public void onClick(View v) {
+        pos++;
+        pos = pos % 3;
+        mTabLabelSwitch.switchTo(pos);
     }
 }

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/switch_tab_label_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#ffffff"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        style="@style/cursor_label_panel">
+
+        <TextView
+            style="@style/cursor_label_name"
+
+            android:text="未使用" />
+
+        <ImageView style="@style/cursor_label_icon" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/cursor_label_panel">
+
+        <TextView
+            style="@style/cursor_label_name"
+            android:text="已使用" />
+
+        <ImageView style="@style/cursor_label_icon" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/cursor_label_panel">
+
+        <TextView
+            style="@style/cursor_label_name"
+            android:text="已过期" />
+
+        <ImageView style="@style/cursor_label_icon" />
+
+    </LinearLayout>
+
+</LinearLayout>
