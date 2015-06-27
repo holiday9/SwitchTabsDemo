@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical" >
 
-    <com.seven.tabslib.FixedIndicatorView
+    <com.seven.tabslib.indicator.FixedIndicatorView
         android:id="@+id/fragment_tabmain_indicator"
         android:layout_width="match_parent"
         android:layout_height="45dp" />

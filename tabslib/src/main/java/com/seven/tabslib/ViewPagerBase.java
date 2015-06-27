@@ -8,14 +8,14 @@ import android.view.MotionEvent;
 /**
  * Created by htyuan on 15-6-27.
  */
-public class MyViewPager extends ViewPager{
+public class ViewPagerBase extends ViewPager{
     private boolean mScrollable;
 
-    public MyViewPager(Context context) {
+    public ViewPagerBase(Context context) {
         super(context);
     }
 
-    public MyViewPager(Context context, AttributeSet attrs) {
+    public ViewPagerBase(Context context, AttributeSet attrs) {
         super(context, attrs);
     }
 

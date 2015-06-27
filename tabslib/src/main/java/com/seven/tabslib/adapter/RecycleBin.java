@@ -1,4 +1,4 @@
-package com.seven.tabslib;
+package com.seven.tabslib.adapter;
 
 import android.annotation.SuppressLint;
 import android.os.Build;

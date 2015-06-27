@@ -6,17 +6,15 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.view.ViewPager;
-import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.seven.switchtabsdemo.R;
-import com.seven.tabslib.FixedIndicatorView;
+import com.seven.tabslib.indicator.FixedIndicatorView;
 import com.seven.tabslib.IndicatorViewPager;
 import com.seven.tabslib.fragment.LazyFragment;
-import com.seven.tabslib.other.OnTransitionTextListener;
 import com.seven.tabslib.slidebar.ColorBar;
 import com.seven.tabslib.slidebar.LayoutBar;
 import com.seven.tabslib.slidebar.ScrollBar;
@@ -63,7 +61,7 @@ public class FirstLayerFragment extends LazyFragment {
 
 		int selectColor = res.getColor(R.color.tab_top_text_2);
 		int unSelectColor = res.getColor(R.color.tab_top_text_1);
-		indicator.setOnTransitionListener(new OnTransitionTextListener(selectSize, unSelectSize, selectColor, unSelectColor));
+//		indicator.setOnTransitionListener(new OnTransitionTextListener(selectSize, unSelectSize, selectColor, unSelectColor));
 
 		viewPager.setOffscreenPageLimit(4);
 

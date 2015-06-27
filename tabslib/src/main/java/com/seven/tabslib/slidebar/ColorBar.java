@@ -22,9 +22,9 @@ public class ColorBar implements ScrollBar {
 		this.gravity = gravity;
 	}
 
-	public int getColor() {
-		return color;
-	}
+//	public int getColor() {
+//		return color;
+//	}
 
 	public void setColor(int color) {
 		this.color = color;

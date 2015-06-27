@@ -1,4 +1,4 @@
-package com.seven.tabslib;
+package com.seven.tabslib.adapter;
 
 import android.support.v4.view.PagerAdapter;
 import android.view.View;

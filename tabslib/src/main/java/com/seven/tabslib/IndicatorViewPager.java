@@ -24,6 +24,9 @@ import android.support.v4.view.ViewPager.OnPageChangeListener;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.seven.tabslib.adapter.FragmentListPageAdapter;
+import com.seven.tabslib.adapter.RecyclingPagerAdapter;
+import com.seven.tabslib.indicator.Indicator;
 import com.seven.tabslib.slidebar.ScrollBar;
 
 public class IndicatorViewPager {

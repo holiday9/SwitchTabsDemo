@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.seven.tabslib;
+package com.seven.tabslib.adapter;
 
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;

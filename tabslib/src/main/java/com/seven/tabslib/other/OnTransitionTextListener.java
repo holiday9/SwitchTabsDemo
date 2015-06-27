@@ -6,7 +6,7 @@ import android.util.TypedValue;
 import android.view.View;
 import android.widget.TextView;
 
-import com.seven.tabslib.Indicator;
+import com.seven.tabslib.indicator.Indicator;
 
 /**
  * 

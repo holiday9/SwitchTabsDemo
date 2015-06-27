@@ -13,7 +13,7 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
  */
-package com.seven.tabslib;
+package com.seven.tabslib.indicator;
 
 import java.util.LinkedHashSet;
 import java.util.Set;
@@ -128,9 +128,6 @@ public interface Indicator {
 
 	/**
 	 * 
-	 * 
-	 * @author试着飞
-	 * @date 2014年11月1日
 	 * @version 1.0 数据源观察者
 	 */
 	static interface DataSetObserver {
@@ -159,7 +156,6 @@ public interface Indicator {
 	 * tab滑动变化的转换监听，tab在切换过程中会调用此监听。<br>
 	 * 通过它可以自定义实现在滑动过程中，tab项的字体变化，颜色变化等等效果<br>
 	 * 目前提供的子类
-	 * {@link com.shizhefei.view.indicator.transition.OnTransitionTextListener}
 	 */
 	public static interface OnTransitionListener {
 		public void onTransition(View view, int position, float selectPercent);

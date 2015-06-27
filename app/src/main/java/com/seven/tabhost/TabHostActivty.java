@@ -10,9 +10,9 @@ import android.widget.TextView;
 
 import com.seven.switchtabsdemo.BaseActivity;
 import com.seven.switchtabsdemo.R;
-import com.seven.tabslib.Indicator;
+import com.seven.tabslib.indicator.Indicator;
 import com.seven.tabslib.IndicatorViewPager;
-import com.seven.tabslib.MyViewPager;
+import com.seven.tabslib.ViewPagerBase;
 
 /**
  * reference : https://github.com/LuckyJayce/ViewPagerIndicator
@@ -26,7 +26,7 @@ public class TabHostActivty extends BaseActivity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tabhost);
-        MyViewPager viewPager = (MyViewPager) findViewById(R.id.tabmain_viewPager);
+        ViewPagerBase viewPager = (ViewPagerBase) findViewById(R.id.tabmain_viewPager);
         viewPager.setScrollable(false);
         Indicator indicator = (Indicator) findViewById(R.id.tabmain_indicator);
         indicatorViewPager = new IndicatorViewPager(indicator, viewPager);

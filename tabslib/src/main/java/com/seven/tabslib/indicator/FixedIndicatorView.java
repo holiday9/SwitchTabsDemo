@@ -1,4 +1,4 @@
-package com.seven.tabslib;
+package com.seven.tabslib.indicator;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -17,6 +17,7 @@ import android.widget.Scroller;
 import com.seven.tabslib.slidebar.ScrollBar;
 
 public class FixedIndicatorView extends LinearLayout implements Indicator {
+    private ScrollBar scrollBar;
 
 	private IndicatorAdapter mAdapter;
 
@@ -208,7 +209,6 @@ public class FixedIndicatorView extends LinearLayout implements Indicator {
 		}
 	};
 
-	private ScrollBar scrollBar;
 
 	@Override
 	public void setScrollBar(ScrollBar scrollBar) {
@@ -286,6 +286,7 @@ public class FixedIndicatorView extends LinearLayout implements Indicator {
 			removeCallbacks(this);
 		}
 
+		/// 滑动没有结束之前，每updateTime刷新一次当前的view
 		@Override
 		public void run() {
 			ViewCompat.postInvalidateOnAnimation(FixedIndicatorView.this);

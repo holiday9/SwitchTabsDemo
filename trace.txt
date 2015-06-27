@@ -1,10 +1,19 @@
 1. 探索：最低级实现
 target : 2 TabHostActivity
 ? Unable to refreence classes from arr in Android Studio
-it is resolved , but i can't find the reason why unable to refrence calssses from arr, i just recreate it.
+:it is resolved , but i can't find the reason why unable to refrence calssses from arr, i just recreate it.
 
 ? how viewPager use fragment
-FragmentPageAdapter extend from PageAdapter
+:FragmentPageAdapter extend from PageAdapter
 
-禁止viewPager滑动
+?禁止viewPager滑动
+:
+
+2. 探索FixedIndicatorView的原理
+? 如何实现viewpager移动的监听
+
+? 确定换为滑动图标的话，如何切图
+:
+
+重构tablibs
 
