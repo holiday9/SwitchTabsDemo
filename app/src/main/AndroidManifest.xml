@@ -16,6 +16,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name="com.seven.tabhost.TabHostActivty"
+            android:label="@string/tabhost" >
+        </activity>
     </application>
 
 </manifest>

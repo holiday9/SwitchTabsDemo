@@ -1,19 +1,18 @@
 package com.seven.switchtabsdemo;
 
 import android.app.Activity;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
+import android.widget.BaseAdapter;
 
+import com.seven.tabhost.TabHostActivty;
 import com.seven.widget.TabLabelSwitch;
 
 import java.util.ArrayList;
 import java.util.List;
 
 
-public class MainActivity extends Activity implements View.OnClickListener{
+public class MainActivity extends BaseActivity implements View.OnClickListener {
     private TabLabelSwitch mTabLabelSwitch;
 
     @Override
@@ -41,10 +40,15 @@ public class MainActivity extends Activity implements View.OnClickListener{
     }
 
     int pos = 0;
+
     @Override
     public void onClick(View v) {
-        pos++;
-        pos = pos % 3;
-        mTabLabelSwitch.switchTo(pos);
+        if (v.getId() == R.id.simple_switch) {
+            pos++;
+            pos = pos % 3;
+            mTabLabelSwitch.switchTo(pos);
+        } else if (v.getId() == R.id.tabhost) {
+            gotoActivity(TabHostActivty.class);
+        }
     }
 }
